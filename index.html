@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Hint Game - Bilmece Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Bilmece Oyunu</h1>
+            <div class="score-board">
+                <span>Puan: <span id="score">0</span></span>
+                <span>Kalan Hak: <span id="attempts">3</span></span>
+            </div>
+        </header>
+
+        <div class="card">
+            <div class="card-content">
+                <h2 id="riddle-text">Bilmece burada görünecek</h2>
+                <div class="hint-section">
+                    <p>Doğru harfler: <span id="correct-letters">-</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="answer-input" placeholder="Cevabınızı yazın...">
+            <button onclick="checkAnswer()">Gönder</button>
+            <button onclick="nextCard()" class="pass-btn">Pas</button>
+        </div>
+
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
